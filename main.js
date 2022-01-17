@@ -7,13 +7,13 @@ let leftBacks = ["Kieran Tierney", "Nuno Tavares", "Sead Kolasinac"];
 let centreBacks = ["Gabriel Magalhaes", "Ben White", "Rob Holding", "Pablo Mari"];
 let goalKeepers = ["Aaron Ramsdale", "Berndt Leno"];
 
-const strikerPosition = document.querySelectorAll(".st");
-const offensiveMidPosition = document.querySelectorAll(".om");
-const centralMidPosition = document.querySelectorAll(".cm");
-const rightBackPosition = document.querySelectorAll(".rb");
-const leftBackPosition = document.querySelectorAll(".lb");
-const centreBackPosition = document.querySelectorAll(".cb");
-const goalKeeperPosition = document.querySelectorAll(".gk");
+let strikerPosition;
+let offensiveMidPosition;
+let centralMidPosition;
+let rightBackPosition;
+let leftBackPosition;
+let centreBackPosition;
+let goalKeeperPosition;
 
 const startScreen = document.querySelector(".start-screen");
 const generateButton = document.querySelector(".generate-btn");
@@ -66,12 +66,33 @@ generateButton.addEventListener("click", ()=>{
         lineups.classList.remove("hide");
         if (checkedButton.value == "four-four-two"){
             fourFourTwo.classList.remove("hide");
+            strikerPosition = document.querySelectorAll(".four-four-two .st");
+            offensiveMidPosition = document.querySelectorAll(".four-four-two .om");
+            centralMidPosition = document.querySelectorAll(".four-four-two .cm");
+            rightBackPosition = document.querySelectorAll(".four-four-two .rb");
+            leftBackPosition = document.querySelectorAll(".four-four-two .lb");
+            centreBackPosition = document.querySelectorAll(".four-four-two .cb");
+            goalKeeperPosition = document.querySelectorAll(".four-four-two .gk");
         } else if (checkedButton.value == "four-two-three-one") {
             fourTwoThreeOne.classList.remove("hide");
+            strikerPosition = document.querySelectorAll(".four-two-three-one .st");
+            offensiveMidPosition = document.querySelectorAll(".four-two-three-one .om");
+            centralMidPosition = document.querySelectorAll(".four-two-three-one .cm");
+            rightBackPosition = document.querySelectorAll(".four-two-three-one .rb");
+            leftBackPosition = document.querySelectorAll(".four-two-three-one .lb");
+            centreBackPosition = document.querySelectorAll(".four-two-three-one .cb");
+            goalKeeperPosition = document.querySelectorAll(".four-two-three-one .gk");
         } else if (checkedButton.value == "three-four-three"){
             threeFourThree.classList.remove("hide");
+            strikerPosition = document.querySelectorAll(".three-four-three .st");
+            offensiveMidPosition = document.querySelectorAll(".three-four-three .om");
+            centralMidPosition = document.querySelectorAll(".three-four-three .cm");
+            rightBackPosition = document.querySelectorAll(".three-four-three .rb");
+            leftBackPosition = document.querySelectorAll(".three-four-three .lb");
+            centreBackPosition = document.querySelectorAll(".three-four-three .cb");
+            goalKeeperPosition = document.querySelectorAll(".three-four-three .gk");
         }
-        //fill positions here
+        
         fillPositions()
     } else {
         alert("please choose a formation before continuing");
